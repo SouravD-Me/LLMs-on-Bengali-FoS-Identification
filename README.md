@@ -19,13 +19,13 @@ Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Id
 Table of Contents
 
 - [Highlights](#highlights)
-- [Dataset (BengFoS)](#dataset--bengfos)
+- [Dataset](#dataset--bengfos)
 - [Models & Key Results](#models--key-results)
 - [Repository Layout](#repository-layout)
-- [Quickstart — Run the Experiments](#quickstart--run-the-experiments)
+- [Quickstart](#quickstart--run-the-experiments)
 - [Results](#results)
 - [Probing & Interpretability](#probing--interpretability)
-- [Figure of Speech — Label Map](#figure-of-speech--label-map)
+- [Figure of Speech Label Map](#figure-of-speech--label-map)
 - [Citation](#citation)
 - [Contact & Source Code Access](#contact--source-code-access)
 - [License & Notes](#license--notes)
@@ -77,7 +77,7 @@ Repository Layout
 
 Quickstart — Run the Experiments
 
-Below is a focused quickstart that includes data preparation, optional upsampling/augmentation, training (LoRA & full), evaluation, quantization, and probing.
+Below is a focused quickstart that includes data prep, optional upsampling/augmentation, training (LoRA & full), evaluation, quantization, and probing.
 
 1) Create Environment & Install Dependencies
 
@@ -243,9 +243,11 @@ Probing & Interpretability
 Figure Placeholders
 
 ![Probing Visualization](https://via.placeholder.com/600x400?text=Probing+Visualization+-+Layer+Signals)
+
 Layer-wise FoS signal probing results
 
 ![Attention Visualization](https://via.placeholder.com/600x400?text=Attention+Visualization+-+Token+Level)
+
 Token-level attention heatmaps for FoS identification
 
 ---
