@@ -1,4 +1,3 @@
-```markdown
 # 🌺 [Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification](https://aclanthology.org/2025.emnlp-main.941/)
 
 [![Paper PDF](https://img.shields.io/badge/Paper-PDF-blue?style=flat-square)](paper/Bengali_FoS_Identification.pdf)
@@ -274,7 +273,6 @@ For questions, collaboration opportunities, or access to source codes, please co
 
 | Component | License | Details |
 |-----------|---------|---------|
-| **Code** | MIT License | See [LICENSE](LICENSE) file |
 | **Dataset** | Custom License | Respect copyright for source poetry; follow dataset license in [data/README.md](data/README.md) |
 | **Paper** | CC-BY-NC-SA | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International |
 
