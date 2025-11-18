@@ -1,7 +1,5 @@
-Here's a completely redesigned, professional README.md file with proper formatting, clear section headings, well-structured tables, and enhanced visual appeal:
-
 ```markdown
-# 🌺 Bengali Figures of Speech — BengFoS
+# 🌺 [Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification](https://aclanthology.org/2025.emnlp-main.941/)
 
 [![Paper PDF](https://img.shields.io/badge/Paper-PDF-blue?style=flat-square)](paper/Bengali_FoS_Identification.pdf)
 [![License](https://img.shields.io/badge/License-CC--BY--NC--SA-lightgrey?style=flat-square)](LICENSE)
@@ -12,9 +10,7 @@ Here's a completely redesigned, professional README.md file with proper formatti
 
 ## 🔍 Project Snapshot
 
-**Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification**
-
-This repository contains the **BengFoS dataset**, reproducible code, visualization assets, and the paper PDF. The project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies.
+This repository contains the **BengFoS dataset**, reproducible code, visualization assets, and research materials for our EMNLP 2025 paper. The project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies for Bengali literary analysis.
 
 ---
 
@@ -267,8 +263,8 @@ If you use the BengFoS dataset or code in your research, please cite our paper:
 
 For questions, collaboration opportunities, or access to source codes, please contact the authors:
 
-- **Sourav Das**: [LinkedIn Profile](https://www.linkedin.com/in/sourav-das-profile/) *(replace with actual link)*
-- **Kripabandhu Ghosh**: [LinkedIn Profile](https://www.linkedin.com/in/kripabandhu-ghosh-profile/) *(replace with actual link)*
+- **[Sourav Das](https://www.linkedin.com/in/sourav-das/)** 
+- **[Kripabandhu Ghosh](https://www.linkedin.com/in/kripabandhu-ghosh/)**
 
 > **Note**: Source code access requires direct contact with authors. We are happy to share the implementation upon request.
 
