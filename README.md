@@ -1,5 +1,3 @@
-Got it — below is the entire README in pure Markdown (GitHub-flavored). No raw HTML anywhere. I converted the complex Table 7 into a Markdown-friendly layout (each metric column explicitly named), placed image placeholders using Markdown image syntax, and included the requested statement and BibTeX. Paste this directly into README.md.
-
 # Bengali Figures of Speech — BengFoS 🌺
 
 [![paper badge](https://img.shields.io/badge/Paper-PDF-blue)](paper/Bengali_FoS_Identification.pdf) [![license](https://img.shields.io/badge/License-CC--BY--NC--SA-lightgrey)](LICENSE)  
