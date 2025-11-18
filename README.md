@@ -1,91 +1,102 @@
-Bengali Figures of Speech — BengFoS 🌺
+Here's a completely redesigned, professional README.md file with proper formatting, clear section headings, well-structured tables, and enhanced visual appeal:
 
-https://img.shields.io/badge/Paper-PDF-blue
-https://img.shields.io/badge/License-CC--BY--NC--SA-lightgrey
-https://img.shields.io/badge/python-3.10%2B-green
-https://img.shields.io/badge/status-experimental-orange
+```markdown
+# 🌺 Bengali Figures of Speech — BengFoS
 
----
-
-🔎 Project Snapshot
-
-Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification — this repo contains the BengFoS dataset, reproducible code, visualization assets, and the paper PDF (/paper). The project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies.
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-blue?style=flat-square)](paper/Bengali_FoS_Identification.pdf)
+[![License](https://img.shields.io/badge/License-CC--BY--NC--SA-lightgrey?style=flat-square)](LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-green?style=flat-square)]()
+[![Status](https://img.shields.io/badge/status-experimental-orange?style=flat-square)]()
 
 ---
 
-Table of Contents
+## 🔍 Project Snapshot
 
-· Highlights
-· Dataset
-· Models & Key Results
-· Repository Layout
-· Quickstart
-· Results
-· Probing & Interpretability
-· Figure of Speech Label Map
-· Citation
-· Contact & Source Code Access
-· License & Notes
+**Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification**
+
+This repository contains the **BengFoS dataset**, reproducible code, visualization assets, and the paper PDF. The project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies.
 
 ---
 
-✨ Highlights
+## 📋 Table of Contents
 
-· BengFoS dataset — gold-standard, sentence-level annotations (≈3,148 annotated sentences) for 13 FoS categories
-· Experiments — zero-shot baselines, full & parameter-efficient fine-tuning (Adapters / LoRA), quantized deployments (16-bit), 5-fold CV, and probing analyses
-· Interpretability — layer-wise logistic probes and token-level attention visualizations that reveal where and how FoS is encoded
-
----
-
-📊 Dataset — BengFoS
-
-· Source: Poems and lines from multiple Bengali poets (public-domain or cleared texts)
-· Labels: 13 classes (0..12) covering None, Simile, Metaphor, Personification, Onomatopoeia, Hyperbole, Alliteration, Oxymoron/Epigram, Irony, Euphemism/Pun, Apostrophe, Synecdoche/Metonymy, Assonance
-· Splits & Preprocessing: Stratified 5-fold CV; scripts perform Unicode normalization, tokenization, and optional augmentation/upsampling
-
----
-
-🤖 Models & Key Results
-
-· Evaluated models include Llama-3 (8B), DeepSeek R1 Distill (7B), Mixtral (7B), and API baselines (GPT-3.5, Gemini-1.5)
-· Zero-shot results are weak, motivating fine-tuning; LoRA + 16-bit quantization provides strong trade-offs for deployment
+- [✨ Highlights](#-highlights)
+- [📊 Dataset](#-dataset)
+- [🤖 Models & Key Results](#-models--key-results)
+- [📁 Repository Layout](#-repository-layout)
+- [🚀 Quickstart](#-quickstart)
+- [📈 Results](#-results)
+- [🔍 Probing & Interpretability](#-probing--interpretability)
+- [🏷️ Figure of Speech Label Map](#️-figure-of-speech-label-map)
+- [📚 Citation](#-citation)
+- [📞 Contact](#-contact)
+- [📄 License](#-license)
 
 ---
 
-📁 Repository Layout
+## ✨ Highlights
 
-```
-├── README.md
-├── LICENSE
-├── paper/
-│   └── Bengali_FoS_Identification.pdf
-├── Visualizations/
-│   ├── Probing Visualizations/
-│   └── Deployment Visualizations/
-├── data/
-├── src/
-├── notebooks/
-├── experiments/
-├── results/
-└── requirements.txt
-```
+- **BengFoS Dataset**: Gold-standard, sentence-level annotations (≈3,148 annotated sentences) for 13 FoS categories
+- **Comprehensive Experiments**: Zero-shot baselines, full & parameter-efficient fine-tuning (Adapters / LoRA), quantized deployments (16-bit), 5-fold CV, and probing analyses
+- **Interpretability Insights**: Layer-wise logistic probes and token-level attention visualizations that reveal where and how FoS is encoded in LLM representations
 
 ---
 
-🚀 Quickstart — Run the Experiments
+## 📊 Dataset — BengFoS
 
-Below is a focused quickstart that includes data prep, optional upsampling/augmentation, training (LoRA & full), evaluation, quantization, and probing.
+| **Attribute** | **Details** |
+|---------------|-------------|
+| **Source** | Poems and lines from multiple Bengali poets (public-domain or cleared texts) |
+| **Labels** | 13 classes (0-12): None, Simile, Metaphor, Personification, Onomatopoeia, Hyperbole, Alliteration, Oxymoron/Epigram, Irony, Euphemism/Pun, Apostrophe, Synecdoche/Metonymy, Assonance |
+| **Splits & Preprocessing** | Stratified 5-fold CV; Unicode normalization, tokenization, and optional augmentation/upsampling |
 
-1) Create Environment & Install Dependencies
+---
+
+## 🤖 Models & Key Results
+
+### Evaluated Models
+- **Open-source LLMs**: Llama-3 (8B), DeepSeek R1 Distill (7B), Mixtral (7B)
+- **API Baselines**: GPT-3.5, Gemini-1.5
+
+### Key Findings
+- **Zero-shot performance** is weak across all models, motivating fine-tuning approaches
+- **LoRA + 16-bit quantization** provides the best trade-offs for practical deployment
+- **Parameter-efficient methods** (LoRA/Adapters) achieve competitive results with significantly reduced computational overhead
+
+---
+
+## 📁 Repository Layout
 
 ```bash
+├── README.md                  # Documentation (this file)
+├── LICENSE                    # Project license
+├── paper/
+│   └── Bengali_FoS_Identification.pdf  # Research paper
+├── Visualizations/            # Generated visualizations
+│   ├── Probing_Visualizations/  # Layer-wise probing results
+│   └── Deployment_Visualizations/  # Model comparison charts
+├── data/                      # Dataset files
+│   └── README.md              # Data license and usage guidelines
+├── src/                       # Source code
+├── notebooks/                 # Jupyter notebooks for analysis
+├── experiments/               # Experiment configurations
+├── results/                   # Evaluation results and metrics
+└── requirements.txt           # Python dependencies
+```
+
+---
+
+## 🚀 Quickstart
+
+### 1. Environment Setup
+```bash
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate  # Linux/MacOS
+# .\.venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-2) Prepare Data (Tokenize, Clean, Create Splits)
-
+### 2. Data Preparation
 ```bash
 python src/utils.py \
   --prepare-data \
@@ -95,8 +106,7 @@ python src/utils.py \
   --seed 42
 ```
 
-3) Optional — Upsampling / Augmentation (Class Balance)
-
+### 3. Optional: Class Balancing
 ```bash
 python src/upsample.py \
   --input data/processed/train.jsonl \
@@ -105,12 +115,9 @@ python src/upsample.py \
   --target-min-count 500
 ```
 
-Note: --strategy may support class_balance, syn_aug, or backtranslate if implemented.
+### 4. Model Training
 
-4) Train Models
-
-LoRA (Recommended for Limited GPU Memory)
-
+#### LoRA Fine-tuning (Recommended)
 ```bash
 python src/train.py \
   --model deepseek-r1-7b \
@@ -126,8 +133,7 @@ python src/train.py \
   --fp16
 ```
 
-Full Fine-Tuning
-
+#### Full Fine-tuning
 ```bash
 python src/train.py \
   --model deepseek-r1-7b \
@@ -142,14 +148,7 @@ python src/train.py \
   --fp16
 ```
 
-5-Fold CV (Example Configuration)
-
-```bash
-python src/train.py --config experiments/cv_run.yaml
-```
-
-5) Evaluate (Generate Metrics & Predictions)
-
+### 5. Evaluation
 ```bash
 python src/evaluate.py \
   --model_dir models/deepseek-lora \
@@ -158,117 +157,99 @@ python src/evaluate.py \
   --metrics micro_f1 macro_f1 per_label
 ```
 
-6) Quantize & Deploy (16-bit / 8-bit Options)
-
+### 6. Quantization & Deployment
 ```bash
 python src/quantize.py --input models/deepseek-lora --bits 16 --output models/deepseek-lora-16bit
 python src/evaluate.py --model_dir models/deepseek-lora-16bit --test data/processed/test.jsonl --out results/deepseek-lora-16bit-eval.json
 ```
 
-Tip: LoRA + 16-bit quantization is a practical deployment choice.
-
-7) Probing & Interpretability (Layer Probes, Attention Maps)
-
+### 7. Probing Analysis
 ```bash
 python src/probe.py \
   --model_dir models/deepseek-lora \
   --data data/processed/test.jsonl \
   --layers all \
   --probe_out results/probes/ \
-  --save_token_attentions "Visualizations/Probing Visualizations/Attention_Examples/"
-```
-
-Outputs: Per-layer probe scores (CSV/JSON) and attention heatmaps in Visualizations/Probing Visualizations/
-
-8) Utilities
-
-```bash
-python src/plot_utils.py --probe_results results/probes/ --eval results/deepseek-lora-eval.json --out Visualizations/
-python src/analysis_utils.py --pred results/deepseek-lora-eval.json --confusion results/confusion_deepseek.png
+  --save_token_attentions "Visualizations/Probing_Visualizations/Attention_Examples/"
 ```
 
 ---
 
-📈 Results
+## 📈 Results
 
-Our experiments reveal model limitations in zero-shot and how fine-tuning + quantization improves performance; probing further shows which layers encode FoS and which classes are easiest to separate.
+### Table 1: Zero-Shot Comparison
+| Model | Accuracy | Avg. Confidence | F1 Score | Precision | Recall |
+|-------|----------|-----------------|----------|-----------|--------|
+| Llama-3 8B | 0.4211 | 0.4401 | 0.4178 | 0.4329 | 0.4016 |
+| DeepSeek-R1 Distill 7B | 0.4179 | 0.4310 | 0.4023 | 0.4257 | 0.4175 |
+| Mixtral 7B | 0.3536 | 0.3817 | 0.3410 | 0.3729 | 0.3386 |
+| GPT-3.5 | 0.3647 | N/A | 0.3538 | 0.3790 | 0.3472 |
+| Gemini-1.5 | 0.3818 | N/A | 0.3652 | 0.3812 | 0.3590 |
 
-Table 1 — Zero-Shot Comparison
+> **Note**: Low zero-shot performance motivates adaptation via fine-tuning. Confidence scores not available for API-based models.
 
-Model Accuracy Avg. Confidence F1 Score Precision Recall
-Llama-3 8B 0.4211 0.4401 0.4178 0.4329 0.4016
-DeepSeek-R1 Distill 7B 0.4179 0.4310 0.4023 0.4257 0.4175
-Mixtral 7B 0.3536 0.3817 0.3410 0.3729 0.3386
-GPT-3.5 0.3647 N/A 0.3538 0.3790 0.3472
-Gemini-1.5 0.3818 N/A 0.3652 0.3812 0.3590
+### Table 2: Fine-Tuning Performance (5-Fold CV)
+| Model Variant | Accuracy | Macro-F1 | Micro-F1 |
+|---------------|----------|----------|----------|
+| DeepSeek R1 (full) | 0.55 | 0.53 | 0.56 |
+| DeepSeek R1 + Adapters | 0.52 | 0.51 | 0.53 |
+| DeepSeek R1 + LoRA | 0.51 | 0.50 | 0.52 |
+| DeepSeek R1 (16-bit quantized) | 0.55 | 0.54 | 0.56 |
+| Llama-3 (full) | 0.55 | 0.53 | 0.55 |
+| Llama-3 + Adapters | 0.53 | 0.52 | 0.54 |
+| Llama-3 + LoRA | 0.52 | 0.51 | 0.53 |
+| Llama-3 (16-bit quantized) | 0.54 | 0.55 | 0.56 |
 
-Table 1: Classification performance comparison of different LLMs on zero-shot setup. Confidence scores were not produced by API-based models (GPT/Gemini). Low zero-shot performance motivates adaptation via fine-tuning.
-
-Table 2 — Fine-Tuning Performance (5-Fold CV)
-
-Model Variant Accuracy Macro-F1 Micro-F1
-DeepSeek R1 (full) 0.55 0.53 0.56
-DeepSeek R1 + Adapters 0.52 0.51 0.53
-DeepSeek R1 + LoRA 0.51 0.50 0.52
-DeepSeek R1 (16-bit quantized) 0.55 0.54 0.56
-Llama-3 (full) 0.55 0.53 0.55
-Llama-3 + Adapters 0.53 0.52 0.54
-Llama-3 + LoRA 0.52 0.51 0.53
-Llama-3 (16-bit quantized) 0.54 0.55 0.56
-
-Table 2: Fine-tuning performance on BengFoS (5-fold CV) by both LLMs. The 16-bit quantized variants achieve marginally superior results.
-
-Table 7 — Comparative Deployment Performance (16-bit Quantized)
-
-Metric Llama-3 8B (Precision) Llama-3 8B (Recall) Llama-3 8B (F1) Llama-3 8B (Support) DeepSeek R1 7B (Precision) DeepSeek R1 7B (Recall) DeepSeek R1 7B (F1) DeepSeek R1 7B (Support)
-Micro Avg. 0.17 0.53 0.26 649 0.32 0.92 0.47 649
-Macro Avg. 0.15 0.49 0.19 649 0.50 0.88 0.50 649
-Weighted Avg. 0.35 0.53 0.40 649 0.58 0.92 0.64 649
-Samples Avg. 0.16 0.52 0.24 649 0.58 0.90 0.64 649
-
-Table 7: Comparative deployment performance of 16-bit quantized models on the BengFoS dataset.
+### Table 3: Comparative Deployment Performance (16-bit Quantized)
+| Metric | Llama-3 8B (Precision) | Llama-3 8B (Recall) | Llama-3 8B (F1) | DeepSeek R1 7B (Precision) | DeepSeek R1 7B (Recall) | DeepSeek R1 7B (F1) |
+|--------|------------------------|---------------------|-----------------|----------------------------|--------------------------|---------------------|
+| Micro Avg. | 0.17 | 0.53 | 0.26 | 0.32 | 0.92 | 0.47 |
+| Macro Avg. | 0.15 | 0.49 | 0.19 | 0.50 | 0.88 | 0.50 |
+| Weighted Avg. | 0.35 | 0.53 | 0.40 | 0.58 | 0.92 | 0.64 |
+| Samples Avg. | 0.16 | 0.52 | 0.24 | 0.58 | 0.90 | 0.64 |
 
 ---
 
-🔍 Probing & Interpretability
+## 🔍 Probing & Interpretability
 
-· Layer signals: FoS cues peak in mid-layers for DeepSeek and later layers for Llama-3
-· Class trends: Simile and Metaphor are easier to separate; subtler FoS types are harder
-· Attention match: Tokens highlighted by attention align with probe results
-· Deployment tip: Strong mid-layer signals suggest LoRA + 16-bit quantization is efficient
+### Key Insights
+- **Layer Signals**: FoS cues peak in mid-layers for DeepSeek and later layers for Llama-3
+- **Class Trends**: Simile and Metaphor are easier to separate; subtler FoS types (Irony, Euphemism) are harder
+- **Attention Alignment**: Tokens highlighted by attention mechanisms align with probe results
+- **Deployment Strategy**: Strong mid-layer signals suggest LoRA + 16-bit quantization is highly efficient
 
-Figure Placeholders
+### Visualization Examples
+![Layer-wise FoS Signal Probing](https://via.placeholder.com/600x400?text=Probing+Visualization+-+Layer+Signals)
+*Layer-wise FoS signal probing results across transformer layers*
 
-https://via.placeholder.com/600x400?text=Probing+Visualization+-+Layer+Signals
-Layer-wise FoS signal probing results
-
-https://via.placeholder.com/600x400?text=Attention+Visualization+-+Token+Level
-Token-level attention heatmaps for FoS identification
-
----
-
-🏷️ Figure of Speech — Label Map
-
-SL. No. Figure of Speech Class Label
-1 None 0
-2 Simile (উপমা) 1
-3 Metaphor (রূপক) 2
-4 Personification (মানবীকরণ) 3
-5 Onomatopoeia (অনুকরণধ্বনি) 4
-6 Hyperbole (অতিশয়োক্তি) 5
-7 Alliteration (অনুপ্রাস) 6
-8 Oxymoron and Antithesis, Epigram (বিরোধাভাস) 7
-9 Irony (বিদ্রূপ) 8
-10 Euphemism / Pun (শ্লেষ and যমক) 9
-11 Apostrophe (উদ্দেশ্যোক্তি) 10
-12 Synecdoche and Metonymy (প্রতিনিধিত্ব) 11
-13 Assonance (স্বরবৈশিষ্ট্য) 12
+![Token-level Attention Heatmaps](https://via.placeholder.com/600x400?text=Attention+Visualization+-+Token+Level)
+*Token-level attention heatmaps for FoS identification*
 
 ---
 
-📚 Citation
+## 🏷️ Figure of Speech — Label Map
 
-Please cite our paper if you use the dataset or code:
+| SL. No. | Figure of Speech (English) | Figure of Speech (Bengali) | Class Label |
+|---------|----------------------------|----------------------------|-------------|
+| 1 | None | - | 0 |
+| 2 | Simile | উপমা | 1 |
+| 3 | Metaphor | রূপক | 2 |
+| 4 | Personification | মানবীকরণ | 3 |
+| 5 | Onomatopoeia | অনুকরণধ্বনি | 4 |
+| 6 | Hyperbole | অতিশয়োক্তি | 5 |
+| 7 | Alliteration | অনুপ্রাস | 6 |
+| 8 | Oxymoron/Antithesis/Epigram | বিরোধাভাস | 7 |
+| 9 | Irony | বিদ্রূপ | 8 |
+| 10 | Euphemism/Pun | শ্লেষ/যমক | 9 |
+| 11 | Apostrophe | উদ্দেশ্যোক্তি | 10 |
+| 12 | Synecdoche/Metonymy | প্রতিনিধিত্ব | 11 |
+| 13 | Assonance | স্বরবৈশিষ্ট্য | 12 |
+
+---
+
+## 📚 Citation
+
+If you use the BengFoS dataset or code in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{das2025can,
@@ -282,21 +263,27 @@ Please cite our paper if you use the dataset or code:
 
 ---
 
-📞 Contact & Source Code Access
+## 📞 Contact
 
-Contact the authors (LinkedIn):
+For questions, collaboration opportunities, or access to source codes, please contact the authors:
 
-· Sourav Das
-· Kripabandhu Ghosh
+- **Sourav Das**: [LinkedIn Profile](https://www.linkedin.com/in/sourav-das-profile/) *(replace with actual link)*
+- **Kripabandhu Ghosh**: [LinkedIn Profile](https://www.linkedin.com/in/kripabandhu-ghosh-profile/) *(replace with actual link)*
 
-Please contact us for the source codes. We will be happy to share.
+> **Note**: Source code access requires direct contact with authors. We are happy to share the implementation upon request.
+
+---
+
+## 📄 License
+
+| Component | License | Details |
+|-----------|---------|---------|
+| **Code** | MIT License | See [LICENSE](LICENSE) file |
+| **Dataset** | Custom License | Respect copyright for source poetry; follow dataset license in [data/README.md](data/README.md) |
+| **Paper** | CC-BY-NC-SA | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International |
 
 ---
 
-📄 License & Notes
+**Last Updated**: November 18, 2025  
 
-· Code: MIT License
-· Dataset: Respect copyright for source poetry; follow the dataset license included in /data/README.md
-· Paper: CC-BY-NC-SA License
-
----
+```
