@@ -260,7 +260,7 @@ If you use the BengFoS dataset or code in your research, please cite our paper:
 
 ## 📞 Contact
 
-**Note**: Please contact us for the complete codebase of the project. We will be happy to share the same.
+### **Note**: Please contact us for the complete codebase of the project. We will be happy to share the same.
 
 - **[Sourav Das](https://www.linkedin.com/in/sourav-das/)** 
 - **[Kripabandhu Ghosh](https://www.linkedin.com/in/kripabandhu-ghosh/)**
