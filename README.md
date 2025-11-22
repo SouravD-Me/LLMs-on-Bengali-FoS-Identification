@@ -9,7 +9,7 @@
 
 ## 🔍 Project Snapshot
 
-This repository contains the **BengFoS dataset**, reproducible code, visualization assets, and research materials for our EMNLP 2025 paper. The project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies for Bengali literary analysis.
+This repository contains the **BengFoS dataset** from our EMNLP 2025 (Main Conference) paper. Our project evaluates LLMs (zero-shot & fine-tuned), probes hidden representations for figure-of-speech (FoS) signals, and explores deployment-friendly quantization strategies for Bengali literary analysis.
 
 ---
 
